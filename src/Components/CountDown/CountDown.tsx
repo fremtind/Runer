@@ -30,7 +30,7 @@ const CountDown: React.FC<ICountDown> = ({
 
     const [count, setCount] = useState(3);
     useInterval(() => {
-        if (count === 0) {
+        if (count === 1) {
             setShowCountDown(false);
         }
         setCount(count - 1);

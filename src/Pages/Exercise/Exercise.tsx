@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Exercise.scss';
 import TestGenerator from "../../Components/TestGenerator";
 import CountDown from "../../Components/CountDown";
+import history from "../../Utilities/History";
 import {customStyles} from "../../Utilities/Types";
 
 import textData from '../../TextData/textData.json';
@@ -14,6 +15,10 @@ const Exercise = () => {
     const [showCountDown, setShowCountDown] = useState<boolean>(true);
     const [testNumber, setTestNumber] = useState<number>(-1);
     useEffect(() => {
+        if (testNumber === textData.textDataArray.length - 1) {
+            history.push('/thankyou');
+            return;
+        }
         if (!showCountDown) {
             setTestNumber(testNumber + 1);
         }
