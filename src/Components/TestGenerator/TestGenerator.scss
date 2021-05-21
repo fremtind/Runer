@@ -1,0 +1,25 @@
+@import "@fremtind/jkl-core/variables/_all.scss";
+@import "@fremtind/jkl-core/mixins/screens";
+@import "@fremtind/jkl-core/functions";
+
+.testGenerator {
+  &__textContainer {
+    display: flex;
+    justify-content: center;
+    margin: $spacing-10 $spacing-7;
+    &--text {
+      max-width: 700px;
+    }
+  }
+  &__bottomMenu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    &__buttonContainer {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-6 $spacing-7;
+    }
+  }
+}
