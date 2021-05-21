@@ -3,13 +3,13 @@
 @import "@fremtind/jkl-core/functions";
 
 .countdown {
-  margin: $spacing-7 $spacing-10;
-  &__infoText {
-    font-size: $font-size-10;
-    white-space: nowrap;
-    width: 80%;
-  }
-  &__number {
-    font-size: 268px;
-  }
+    margin: $spacing-7 $spacing-10;
+    &__infoText {
+        font-size: $font-size-10;
+        white-space: nowrap;
+        width: 80%;
+    }
+    &__number {
+        font-size: 268px;
+    }
 }

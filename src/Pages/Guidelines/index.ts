@@ -1,1 +1,1 @@
-export { default } from './Guidelines';
+export { default } from "./Guidelines";

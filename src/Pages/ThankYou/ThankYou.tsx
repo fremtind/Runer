@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import './ThankYou.scss';
-import {PrimaryButton} from "@fremtind/jkl-button-react";
+import React, { useEffect } from "react";
+import "./ThankYou.scss";
+import { PrimaryButton } from "@fremtind/jkl-button-react";
 import history from "../../Utilities/History";
 
 const ThankYou = () => {
     useEffect(() => {
-        document.title = 'ThankYou';
+        document.title = "ThankYou";
     }, []);
 
     return (
@@ -14,7 +14,7 @@ const ThankYou = () => {
             <img src="http://i.imgur.com/62M6N.gif" />
             <PrimaryButton
                 onClick={() => {
-                    history.push('/');
+                    history.push("/");
                 }}
             >
                 Gå til hjemmeside

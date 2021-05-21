@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react';
-import './TestGenerator.scss';
+import React, { useEffect } from "react";
+import "./TestGenerator.scss";
 import history from "../../Utilities/History";
 import { PrimaryButton, TertiaryButton } from "@fremtind/jkl-button-react";
 import "@fremtind/jkl-button/button.min.css";
-import {ITestGenerator} from "../../Utilities/Interfaces";
+import { ITestGenerator } from "../../Utilities/Interfaces";
 
-const TestGenerator: React.FC<ITestGenerator> = ({
-    text,
-    customStyles,
-    setShowCountDown,
-}) => {
+const TestGenerator: React.FC<ITestGenerator> = ({ text, customStyles, setShowCountDown }) => {
     useEffect(() => {
-        document.title = 'Test';
-        const textContainer:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer');
-        const textBox:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer--text');
+        document.title = "Test";
+        const textContainer: HTMLDivElement | null = document.querySelector(".testGenerator__textContainer");
+        const textBox: HTMLDivElement | null = document.querySelector(".testGenerator__textContainer--text");
         if (textContainer && textBox && customStyles) {
             textContainer.style.backgroundColor = customStyles.backgroundColor;
             textBox.style.color = customStyles.fontColor;
@@ -30,9 +26,9 @@ const TestGenerator: React.FC<ITestGenerator> = ({
             <div className="testGenerator__bottomMenu">
                 <hr
                     style={{
-                        color: 'black',
-                        backgroundColor: 'white',
-                        height: 1
+                        color: "black",
+                        backgroundColor: "white",
+                        height: 1,
                     }}
                 />
                 <div className="testGenerator__bottomMenu__buttonContainer">
@@ -46,7 +42,7 @@ const TestGenerator: React.FC<ITestGenerator> = ({
                     </PrimaryButton>
                     <TertiaryButton
                         onClick={() => {
-                            history.push('/');
+                            history.push("/");
                         }}
                     >
                         Avbryt testen

@@ -1,4 +1,4 @@
-import {customStyles} from "./Types";
+import { customStyles } from "./Types";
 import React from "react";
 
 export interface ITestGenerator {

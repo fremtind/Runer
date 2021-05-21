@@ -3,6 +3,6 @@ export type customStyles = {
     fontColor: string;
     fontFamily: string;
     fontSize: string;
-}
+};
 
 export type IIntervalFunction = () => unknown | void;
