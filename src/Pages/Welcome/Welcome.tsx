@@ -39,37 +39,36 @@ const Welcome = () => {
                     </div>
                 </section>
 
-                <hr
-                    style={{
-                        color: "black",
-                        backgroundColor: "white",
-                        height: 1,
-                    }}
-                />
+                <div className="welcome-hero__inverted-wrapper">
+                    <section className="welcome-hero  welcome-hero--with-cells">
+                        <div className="welcome-hero__cell">
+                            <h2>Hvorfor gjør vi dette?</h2>
+                            <p>
+                                Målet med denne testen er å finne ut om hvor lesbar tekst satt i Fremtind fonten er.
+                                Lesbarhet påvirker ikke bare brukervennligheten, men også opplevelsen av nettsiden.
+                            </p>
+                            <p>
+                                Vi vil teste hvordan fonten til Fremtind fungerer under ulike omstendigheter, som for
+                                eksempel lys og mørk bakgrunn, ulike størrelser, ulike vekter, ulike nettlesere og
+                                operativsystem.
+                            </p>
+                        </div>
+                    </section>
 
-                <section className="welcome-hero welcome-hero--inverted">
-                    <h2>Hvorfor gjør vi dette?</h2>
-                    <p>
-                        Målet med denne testen er å finne ut om hvor lesbar tekst satt i Fremtind fonten er. Lesbarhet
-                        påvirker ikke bare brukervennligheten, men også opplevelsen av nettsiden.
-                    </p>
-                    <p>
-                        Vi vil teste hvordan fonten til Fremtind fungerer under ulike omstendigheter, som for eksempel
-                        lys og mørk bakgrunn, ulike størrelser, ulike vekter, ulike nettlesere og operativsystem.
-                    </p>
-                </section>
-
-                <section className="welcome-hero welcome-hero--inverted">
-                    <h2>Hvem er vi?</h2>
-                    <p>
-                        Vi er designere og utviklere som brenner for bedre brukeropplevelse for våre brukere. Vi jobber
-                        i designsystemet og ulike leveranse team i Fremtind.
-                    </p>
-                    <p>
-                        Vi er tre interaksjonsdesignere og to utviklere med ulik bakgrunn og ekspertise. Sammen skal vi
-                        sørge for at våre løsninger har den beste brukeropplevelsen.
-                    </p>
-                </section>
+                    <section className="welcome-hero  welcome-hero--with-cells">
+                        <div className="welcome-hero__cell">
+                            <h2>Hvem er vi?</h2>
+                            <p>
+                                Vi er designere og utviklere som brenner for bedre brukeropplevelse for våre brukere. Vi
+                                jobber i designsystemet og ulike leveranseteam i Fremtind.
+                            </p>
+                            <p>
+                                Vi er tre interaksjonsdesignere og to utviklere med ulik bakgrunn og ekspertise. Sammen
+                                skal vi sørge for at våre løsninger har den beste brukeropplevelsen.
+                            </p>
+                        </div>
+                    </section>
+                </div>
             </main>
         </>
     );
