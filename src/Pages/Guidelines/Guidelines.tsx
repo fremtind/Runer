@@ -3,7 +3,7 @@ import "./Guidelines.scss";
 
 const Guidelines = () => {
     useEffect(() => {
-        document.title = "Retningslinjer";
+        document.title = "Retningslinjer | Runer";
     }, []);
 
     return <section className="guidelines">You are in Guidelines</section>;

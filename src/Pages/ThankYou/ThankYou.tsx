@@ -5,7 +5,7 @@ import history from "../../Utilities/History";
 
 const ThankYou = () => {
     useEffect(() => {
-        document.title = "ThankYou";
+        document.title = "Ferdig | Runer";
     }, []);
 
     return (

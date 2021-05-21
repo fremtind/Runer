@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import "./Exercise.scss";
+import { useEffect, useState } from "react";
 import TestGenerator from "../../Components/TestGenerator";
 import CountDown from "../../Components/CountDown";
 import history from "../../Utilities/History";
 import { customStyles } from "../../Utilities/Types";
+import "./Exercise.scss";
 
 import textData from "../../TextData/textData.json";
 
 const Exercise = () => {
     useEffect(() => {
-        document.title = "Exercise";
+        document.title = "Lesetest | Runer";
     }, []);
 
     const [showCountDown, setShowCountDown] = useState<boolean>(true);
