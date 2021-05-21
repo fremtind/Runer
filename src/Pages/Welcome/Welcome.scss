@@ -1,27 +1,57 @@
-@import "@fremtind/jkl-core/variables/_all.scss";
-@import "@fremtind/jkl-core/mixins/screens";
+@import "@fremtind/jkl-core/variables/all";
+@import "@fremtind/jkl-core/mixins/all";
 @import "@fremtind/jkl-core/functions";
 
 .welcome {
-    margin: 200px 40px;
-    h1 {
-        @include jkl-text-style("desktop/lead");
+    & > * {
+        margin-left: $layout-spacing--medium;
+        margin-right: $layout-spacing--medium;
     }
-    &__hero {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 2rem;
-        justify-content: center;
+
+    h1 {
+        @include jkl-text-style("desktop/title-large");
+        max-width: 1021px;
+        margin-top: $layout-spacing--xl;
+        margin-bottom: $layout-spacing--xl;
+    }
+
+    &-hero {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: $layout-spacing--medium;
+        padding-right: $layout-spacing--medium;
+
+        &--with-cells {
+            display: flex;
+        }
+
+        &--inverted {
+            background-color: $gra-100;
+            color: $gra-10;
+        }
+
         &__cell {
-            width: 50%;
-            p {
-                width: 50%;
-                font-size: $font-size-6;
-                margin-bottom: 50px;
+            flex: 1;
+            position: relative;
+        }
+
+        &__img {
+            width: 548px;
+
+            &--vertical-push {
+                position: absolute;
+                bottom: -200px;
             }
-            &--bannerImg {
-                width: 450px;
-            }
+        }
+
+        p {
+            @include jkl-text-style("desktop/body");
+            padding-bottom: 50px;
+            margin-left: $layout-spacing--large;
+        }
+
+        h2 {
+            @include jkl-text-style("desktop/title-small");
         }
     }
 }

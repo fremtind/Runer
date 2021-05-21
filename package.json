@@ -5,6 +5,9 @@
     "dependencies": {
         "@fremtind/jkl-button-react": "^2.5.13",
         "@fremtind/jkl-core": "^4.19.0",
+        "@fremtind/jkl-icons": "^1.2.0",
+        "@fremtind/jkl-icons-react": "^1.4.2",
+        "@fremtind/jkl-webfonts": "^1.1.7",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",

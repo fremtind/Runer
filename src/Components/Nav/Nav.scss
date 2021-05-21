@@ -1,0 +1,17 @@
+@import "@fremtind/jkl-core/variables/all";
+@import "@fremtind/jkl-core/mixins/all";
+
+.heading-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $layout-spacing--medium;
+
+    &__brand {
+        @include jkl-text-style("desktop/heading-small");
+    }
+
+    &__story {
+        @include jkl-text-style("desktop/body");
+    }
+}

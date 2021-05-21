@@ -1,4 +1,6 @@
+@use '~@fremtind/jkl-webfonts/webfonts.scss' with (
+    $webfonts-dir: "./fonts"
+);
+
 @import "@fremtind/jkl-core/core.scss";
-@import "@fremtind/jkl-core/variables/_all.scss";
-@import "@fremtind/jkl-core/mixins/screens";
-@import "@fremtind/jkl-core/functions";
+@import "@fremtind/jkl-icons/animated-icons.scss";

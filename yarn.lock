@@ -1202,6 +1202,21 @@
     "@babel/runtime" "^7.9.0"
     classnames "^2.2.6"
 
+"@fremtind/jkl-icons-react@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@fremtind/jkl-icons-react/-/jkl-icons-react-1.4.2.tgz#6bd4dfc2afd3181b5f0d337b79b6a01d419cd40e"
+  integrity sha512-XC3I0diXmG7bSN+uPQtXfqE8iuQddovSm/jOvQgMNjCbAueJF92nHtDKXrF/VU91CKvZSfb7KKlSm5r2+0l7bg==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-icons" "^1.2.0"
+
+"@fremtind/jkl-icons@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@fremtind/jkl-icons/-/jkl-icons-1.2.0.tgz#5d55be67fa2cd9760f6a5fac67d73181a569afc1"
+  integrity sha512-QyGszpGgBykr2ai+4MMSdBeEQ2Gp9kleEAB00Rgjjq7dmz07bmTd3EpP14ByCf7IOkq4N1q4pwCR7xeykQ2ykg==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
+
 "@fremtind/jkl-loader-react@^1.5.8":
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/@fremtind/jkl-loader-react/-/jkl-loader-react-1.5.8.tgz#b14793154096fefb390ec061d0516e63e1d75fe0"
@@ -1217,6 +1232,11 @@
   integrity sha512-iW5JEoJp+7fBqsAaPDd9qATYwcROIiaE6G1YcOZpwoGUgkLKGwhImXi6gyfmCOwNRVUFnIf4ZHUsp3ZFIFNBdw==
   dependencies:
     "@fremtind/jkl-core" "^4.21.1"
+
+"@fremtind/jkl-webfonts@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@fremtind/jkl-webfonts/-/jkl-webfonts-1.1.7.tgz#1594785dae4e3370cabe1f2b4368f9806abd8cb0"
+  integrity sha512-qWV9q01B/UP5Iqa7b629fg5lrxxGhm+z+Of+sDrejWrQUswEXXdR8LvjAv4nOrLKQ4OIqlqu2i3dWALR44Pf0w==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
