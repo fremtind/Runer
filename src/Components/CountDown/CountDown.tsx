@@ -28,7 +28,7 @@ const CountDown: React.FC<ICountDown> = ({
         document.title = 'Get Ready!';
     }, []);
 
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(3);
     useInterval(() => {
         if (count === 0) {
             setShowCountDown(false);
@@ -38,7 +38,8 @@ const CountDown: React.FC<ICountDown> = ({
 
     return (
         <section className="countdown">
-            {count}
+            <p className="countdown__infoText">Teksten du skal lese vil dukke opp her</p>
+            <p className="countdown__number">{count}</p>
         </section>
     );
 };

@@ -14,9 +14,7 @@ const TestGenerator: React.FC<ITestGenerator> = ({
         document.title = 'Test';
         const textContainer:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer');
         const textBox:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer--text');
-        console.log(textContainer);
-        console.log(textBox);
-        if (textContainer && textBox) {
+        if (textContainer && textBox && customStyles) {
             textContainer.style.backgroundColor = customStyles.backgroundColor;
             textBox.style.color = customStyles.fontColor;
             textBox.style.fontFamily = customStyles.fontFamily;

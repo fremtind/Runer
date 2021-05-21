@@ -10,7 +10,7 @@ const Exercise = () => {
     }, []);
 
     const [showCountDown, setShowCountDown] = useState<boolean>(true);
-    const [testNumber, setTestNumber] = useState<number>(0);
+    const [testNumber, setTestNumber] = useState<number>(-1);
     useEffect(() => {
         if (!showCountDown) {
             setTestNumber(testNumber + 1);
