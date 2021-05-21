@@ -1,0 +1,27 @@
+@import "@fremtind/jkl-core/variables/_all.scss";
+@import "@fremtind/jkl-core/mixins/screens";
+@import "@fremtind/jkl-core/functions";
+
+.welcome {
+  margin: 200px 40px;
+  h1 {
+    @include jkl-text-style("desktop/lead");
+  }
+  &__hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    &__cell {
+      width: 50%;
+      p {
+        width: 50%;
+        font-size: $font-size-6;
+        margin-bottom: 50px;
+      }
+      &--bannerImg {
+        width: 450px;
+      }
+    }
+  }
+}
