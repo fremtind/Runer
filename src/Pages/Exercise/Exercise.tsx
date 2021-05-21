@@ -4,6 +4,8 @@ import TestGenerator from "../../Components/TestGenerator";
 import CountDown from "../../Components/CountDown";
 import {customStyles} from "../../Utilities/Types";
 
+import textData from '../../TextData/textData.json';
+
 const Exercise = () => {
     useEffect(() => {
         document.title = 'Exercise';
@@ -44,7 +46,7 @@ const Exercise = () => {
                 <CountDown setShowCountDown={setShowCountDown}/>
                 :
                 <TestGenerator
-                    text="Hello Hello Hello!"
+                    text={textData.textDataArray[testNumber]}
                     customStyles={customStyles[testNumber]}
                     setShowCountDown={setShowCountDown}
                 />
