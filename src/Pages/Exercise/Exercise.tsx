@@ -31,7 +31,14 @@ const Exercise = () => {
             fontColor: "white",
             fontFamily: "sans-serif",
             fontSize: "26px",
-        }, {
+        },
+        {
+            backgroundColor: "white",
+            fontColor: "black",
+            fontFamily: "sans-serif",
+            fontSize: "26px",
+        },
+        {
             backgroundColor: "pink",
             fontColor: "white",
             fontFamily: "arial",
