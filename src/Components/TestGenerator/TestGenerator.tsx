@@ -21,7 +21,15 @@ const TestGenerator: React.FC<ITestGenerator> = ({
 }) => {
     useEffect(() => {
         document.title = 'Test';
-    }, []);
+        const textContainer:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer');
+        const textBox:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer--text');
+        if (textContainer && textBox) {
+            textContainer.style.backgroundColor = backgroundColor;
+            textBox.style.color = fontColor;
+            textBox.style.fontFamily = fontFamily;
+            textBox.style.fontSize = fontSize;
+        }
+    }, [backgroundColor, fontSize, fontFamily, fontColor]);
 
     return (
         <section className="testGenerator">

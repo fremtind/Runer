@@ -6,14 +6,16 @@
   &__textContainer {
     display: flex;
     justify-content: center;
-    margin: $spacing-10 $spacing-7;
+    height: 90vh;
+    padding: $spacing-10 $spacing-7;
     &--text {
       max-width: 700px;
     }
   }
   &__bottomMenu {
-    position: fixed;
     bottom: 0;
+    height: 10vh;
+    position: fixed;
     width: 100%;
     &__buttonContainer {
       background: white;
