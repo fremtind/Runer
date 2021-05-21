@@ -1,0 +1,16 @@
+@import "@fremtind/jkl-core/variables/all";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: $layout-spacing--small $layout-spacing--medium;
+    padding-bottom: $layout-spacing--xxl;
+    border-top: 1px solid $gra-30;
+
+    // TODO dirty hack to place second item on edge in a reverse 2 column footer
+    & > :last-child {
+        position: absolute;
+        right: $layout-spacing--medium;
+    }
+}

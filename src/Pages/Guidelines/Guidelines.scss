@@ -1,0 +1,38 @@
+@import "@fremtind/jkl-core/variables/all";
+@import "@fremtind/jkl-core/mixins/all";
+
+.guidelines-page {
+    flex: 1;
+
+    & > * {
+        margin-left: $layout-spacing--medium;
+        margin-right: $layout-spacing--medium;
+    }
+
+    h1 {
+        @include jkl-text-style("desktop/title-large");
+        max-width: 1021px;
+        margin-top: $layout-spacing--xl;
+        margin-bottom: $layout-spacing--large;
+    }
+
+    p {
+        @include jkl-text-style("desktop/body");
+    }
+
+    ol {
+        @include jkl-text-style("desktop/heading-small");
+        li {
+            margin-left: $component-spacing--xl;
+            padding-left: $component-spacing--xl;
+            margin-bottom: $component-spacing--xl;
+        }
+    }
+
+    p,
+    ol {
+        max-width: 55ch;
+        margin-left: $layout-spacing--xxl;
+        margin-bottom: $component-spacing--small;
+    }
+}

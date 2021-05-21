@@ -4,3 +4,10 @@
 
 @import "@fremtind/jkl-core/core.scss";
 @import "@fremtind/jkl-icons/animated-icons.scss";
+@import "@fremtind/jkl-button/button.scss";
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -13,7 +13,7 @@ const Welcome = () => {
     return (
         <>
             <Nav />
-            <main className="welcome">
+            <main className="welcome-page">
                 <h1>Velkommen til en lesbarhetstest av vår font Fremtind Grotesk</h1>
                 <section className="welcome-hero welcome-hero--with-cells">
                     <div className="welcome-hero__cell">
@@ -24,7 +24,7 @@ const Welcome = () => {
                         <PrimaryButton
                             className="welcome__hero__cell--actionBtn"
                             onClick={() => {
-                                history.push("/exercise");
+                                history.push("/guidelines");
                             }}
                         >
                             Kom i gang

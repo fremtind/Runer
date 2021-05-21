@@ -5,7 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: $layout-spacing--medium;
+    padding: $layout-spacing--medium;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: $hvit;
 
     &__brand {
         @include jkl-text-style("desktop/heading-small");

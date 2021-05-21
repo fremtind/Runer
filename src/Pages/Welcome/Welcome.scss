@@ -2,7 +2,7 @@
 @import "@fremtind/jkl-core/mixins/all";
 @import "@fremtind/jkl-core/functions";
 
-.welcome {
+.welcome-page {
     & > * {
         margin-left: $layout-spacing--medium;
         margin-right: $layout-spacing--medium;
@@ -15,7 +15,7 @@
         margin-bottom: $layout-spacing--xl;
     }
 
-    &-hero {
+    .welcome-hero {
         border-top: 1px solid $gra-10;
         margin-bottom: $layout-spacing--large;
 
@@ -52,6 +52,7 @@
 
         &__img {
             width: 548px;
+            max-width: 100%;
 
             &--vertical-push {
                 position: absolute;
