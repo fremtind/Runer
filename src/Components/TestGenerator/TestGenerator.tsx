@@ -10,6 +10,7 @@ interface ITestGenerator {
     fontColor: string;
     fontFamily: string;
     fontSize: string;
+    setShowCountDown: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const TestGenerator: React.FC<ITestGenerator> = ({
@@ -18,6 +19,7 @@ const TestGenerator: React.FC<ITestGenerator> = ({
     fontColor,
     fontFamily,
     fontSize,
+    setShowCountDown,
 }) => {
     useEffect(() => {
         document.title = 'Test';
@@ -48,7 +50,7 @@ const TestGenerator: React.FC<ITestGenerator> = ({
                     <div></div>
                     <PrimaryButton
                         onClick={() => {
-                            history.push('/guidelines');
+                            setShowCountDown(true);
                         }}
                     >
                         Ferdig å lese
