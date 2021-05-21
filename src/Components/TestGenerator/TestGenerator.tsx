@@ -3,35 +3,26 @@ import './TestGenerator.scss';
 import history from "../../Utilities/History";
 import { PrimaryButton, TertiaryButton } from "@fremtind/jkl-button-react";
 import "@fremtind/jkl-button/button.min.css";
-
-interface ITestGenerator {
-    text: string;
-    backgroundColor: string;
-    fontColor: string;
-    fontFamily: string;
-    fontSize: string;
-    setShowCountDown: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import {ITestGenerator} from "../../Utilities/Interfaces";
 
 const TestGenerator: React.FC<ITestGenerator> = ({
     text,
-    backgroundColor,
-    fontColor,
-    fontFamily,
-    fontSize,
+    customStyles,
     setShowCountDown,
 }) => {
     useEffect(() => {
         document.title = 'Test';
         const textContainer:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer');
         const textBox:HTMLDivElement|null = document.querySelector('.testGenerator__textContainer--text');
+        console.log(textContainer);
+        console.log(textBox);
         if (textContainer && textBox) {
-            textContainer.style.backgroundColor = backgroundColor;
-            textBox.style.color = fontColor;
-            textBox.style.fontFamily = fontFamily;
-            textBox.style.fontSize = fontSize;
+            textContainer.style.backgroundColor = customStyles.backgroundColor;
+            textBox.style.color = customStyles.fontColor;
+            textBox.style.fontFamily = customStyles.fontFamily;
+            textBox.style.fontSize = customStyles.fontSize;
         }
-    }, [backgroundColor, fontSize, fontFamily, fontColor]);
+    }, [customStyles]);
 
     return (
         <section className="testGenerator">

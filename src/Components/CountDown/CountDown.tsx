@@ -1,12 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './CountDown.scss';
-import history from "../../Utilities/History";
+import {ICountDown} from "../../Utilities/Interfaces";
+import {IIntervalFunction} from "../../Utilities/Types";
 
-interface ICountDown {
-    setShowCountDown: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-type IIntervalFunction = () => unknown | void;
 export const useInterval = (callback: IIntervalFunction, delay: number) => {
     const savedCallback = useRef<IIntervalFunction | null>(null);
 
@@ -32,7 +28,7 @@ const CountDown: React.FC<ICountDown> = ({
         document.title = 'Get Ready!';
     }, []);
 
-    const [count, setCount] = useState(3);
+    const [count, setCount] = useState(1);
     useInterval(() => {
         if (count === 0) {
             setShowCountDown(false);

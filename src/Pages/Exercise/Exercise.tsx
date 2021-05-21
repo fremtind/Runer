@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Exercise.scss';
 import TestGenerator from "../../Components/TestGenerator";
 import CountDown from "../../Components/CountDown";
+import {customStyles} from "../../Utilities/Types";
 
 const Exercise = () => {
     useEffect(() => {
@@ -17,6 +18,26 @@ const Exercise = () => {
         console.log('testNumber', testNumber);
     }, [showCountDown]);
 
+    const customStyles: Array<customStyles> = [
+        {
+            backgroundColor: "black",
+            fontColor: "white",
+            fontFamily: "sans-serif",
+            fontSize: "26px",
+        }, {
+            backgroundColor: "pink",
+            fontColor: "white",
+            fontFamily: "arial",
+            fontSize: "46px",
+        },
+        {
+            backgroundColor: "yellow",
+            fontColor: "black",
+            fontFamily: "arial",
+            fontSize: "12px",
+        }
+    ];
+
     return (
         <section className="exercise">
             {showCountDown ?
@@ -24,10 +45,7 @@ const Exercise = () => {
                 :
                 <TestGenerator
                     text="Hello Hello Hello!"
-                    backgroundColor="black"
-                    fontColor="white"
-                    fontFamily="sans-serif"
-                    fontSize="26px"
+                    customStyles={customStyles[testNumber]}
                     setShowCountDown={setShowCountDown}
                 />
             }
