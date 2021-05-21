@@ -6,6 +6,7 @@ import './App.scss';
 
 const Welcome = React.lazy(() => import('./Pages/Welcome'));
 const Guidelines = React.lazy(() => import('./Pages/Guidelines'));
+const Exercise = React.lazy(() => import('./Pages/Exercise'));
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Welcome} />
             <Route exact path="/guidelines" component={Guidelines} />
+            <Route exact path="/exercise" component={Exercise} />
           </Switch>
         </Router>
       </Suspense>

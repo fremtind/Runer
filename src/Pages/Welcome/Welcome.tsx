@@ -20,14 +20,14 @@ const Welcome = () => {
                     <PrimaryButton
                         className="welcome__hero__cell--actionBtn"
                         onClick={() => {
-                            history.push('/guidelines');
+                            history.push('/exercise');
                         }}
                     >
                         Kom i gang
                     </PrimaryButton>
                 </div>
                 <div className="welcome__hero__cell">
-                    <img className="welcome__hero__cell--bannerImg" src="./assets/images/Runer.jpg" />
+                    <img className="welcome__hero__cell--bannerImg" src="./assets/images/Runer.jpg" alt="Runer Logo"/>
                 </div>
             </section>
             <hr
