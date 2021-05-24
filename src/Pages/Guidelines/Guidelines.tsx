@@ -1,8 +1,9 @@
-import { PrimaryButton } from "@fremtind/jkl-button-react";
+import {PrimaryButton, TertiaryButton} from "@fremtind/jkl-button-react";
 import React, { useEffect } from "react";
 import { Footer } from "../../Components/Footer/Footer";
 import { Nav } from "../../Components/Nav";
 import "./Guidelines.scss";
+import history from "../../Utilities/History";
 
 const Guidelines = () => {
     useEffect(() => {
@@ -34,8 +35,20 @@ const Guidelines = () => {
                 </ol>
             </main>
             <Footer>
-                <PrimaryButton>Start testen nå</PrimaryButton>
-                <PrimaryButton>Avbryt</PrimaryButton>
+                <PrimaryButton
+                    onClick={() => {
+                        history.push('/exercise');
+                    }}
+                >
+                    Start testen nå
+                </PrimaryButton>
+                <TertiaryButton
+                    onClick={() => {
+                        history.push("/");
+                    }}
+                >
+                    Avbryt testen
+                </TertiaryButton>
             </Footer>
         </>
     );
