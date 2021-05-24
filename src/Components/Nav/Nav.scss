@@ -2,9 +2,10 @@
 @import "@fremtind/jkl-core/mixins/all";
 
 .heading-nav {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
     padding: $layout-spacing--medium;
     position: sticky;
     top: 0;
