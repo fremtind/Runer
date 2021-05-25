@@ -1,25 +1,25 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { Nav } from "../../Components/Nav";
 import "./ThankYou.scss";
-import { PrimaryButton } from "@fremtind/jkl-button-react";
-import history from "../../Utilities/History";
 
 const ThankYou = () => {
     useEffect(() => {
-        document.title = "Ferdig | Runer";
+        document.title = "Takk! | Runer";
     }, []);
 
     return (
-        <section className="thankyou">
-            <h1>Takk! Da var du ferdig!</h1>
-            <img src="http://i.imgur.com/62M6N.gif" />
-            <PrimaryButton
-                onClick={() => {
-                    history.push("/");
-                }}
-            >
-                Gå til hjemmeside
-            </PrimaryButton>
-        </section>
+        <>
+            <Nav />
+            <main className="thankyou-page">
+                <section className="thankyou__intro">
+                    <h1>Takk! Da var du ferdig!</h1>
+                    <p>
+                        Vi setter stor pris på ditt bidrag, det vil komme godt med i vårt arbeid. Takk for at du tok deg
+                        tid!
+                    </p>
+                </section>
+            </main>
+        </>
     );
 };
 

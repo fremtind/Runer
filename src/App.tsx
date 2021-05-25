@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import history from "./Utilities/History";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
@@ -12,14 +11,14 @@ const ThankYou = React.lazy(() => import("./Pages/ThankYou"));
 const App = () => {
     return (
         <Suspense fallback={<div />}>
-            <Router history={history}>
+            <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Welcome} />
                     <Route exact path="/guidelines" component={Guidelines} />
                     <Route exact path="/exercise" component={Exercise} />
                     <Route exact path="/thankyou" component={ThankYou} />
                 </Switch>
-            </Router>
+            </BrowserRouter>
         </Suspense>
     );
 };

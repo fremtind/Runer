@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import { PrimaryButton } from "@fremtind/jkl-button-react";
 import "@fremtind/jkl-button/button.min.css";
-import history from "../../Utilities/History";
 import "./Welcome.scss";
 import { Nav } from "../../Components/Nav";
+import { useHistory } from "react-router";
 
 const Welcome = () => {
     useEffect(() => {
         document.title = "Velkommen til Runer";
     }, []);
+
+    const history = useHistory();
 
     return (
         <>

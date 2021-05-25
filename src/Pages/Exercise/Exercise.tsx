@@ -1,69 +1,102 @@
-import { useEffect, useState } from "react";
-import TestGenerator from "../../Components/TestGenerator";
+import { useEffect, useState, CSSProperties, useMemo } from "react";
+import { useHistory } from "react-router";
+import { PrimaryButton, TertiaryButton } from "@fremtind/jkl-button-react";
+import styled from "styled-components";
+import { Footer } from "../../Components/Footer";
 import CountDown from "../../Components/CountDown";
-import history from "../../Utilities/History";
-import { customStyles } from "../../Utilities/Types";
+import exercises from "../../exercises/exercises";
 import "./Exercise.scss";
 
-import textData from "../../TextData/textData.json";
+const StyledMain = styled.main((props: CSSProperties) => ({
+    ...props,
+}));
+
+const useSlideControl = () => {
+    const history = useHistory();
+
+    const [state, setState] = useState<{
+        showCountdown: boolean;
+        activeTest: number;
+        testStart: null | Date;
+    }>({
+        showCountdown: true,
+        activeTest: 0,
+        testStart: null,
+    });
+
+    const onCountdownFinish = () => {
+        setState({
+            ...state,
+            showCountdown: false,
+            testStart: new Date(),
+        });
+    };
+
+    const onFinishExercise = () => {
+        // TODO send data to backend
+        console.log(Date.now() / 1000 - state.testStart!.getTime() / 1000);
+
+        if (state.activeTest + 1 >= exercises.length) {
+            history.push("/thankyou");
+            return;
+        }
+
+        setState({
+            showCountdown: true,
+            activeTest: state.activeTest + 1,
+            testStart: null,
+        });
+    };
+
+    const currentExercise = useMemo(() => {
+        return exercises[state.activeTest];
+    }, [state]);
+
+    return { currentExercise, showCountdown: state.showCountdown, onCountdownFinish, onFinishExercise };
+};
 
 const Exercise = () => {
+    const history = useHistory();
+
     useEffect(() => {
         document.title = "Lesetest | Runer";
     }, []);
 
-    const [showCountDown, setShowCountDown] = useState<boolean>(true);
-    const [testNumber, setTestNumber] = useState<number>(-1);
-    useEffect(() => {
-        if (testNumber === textData.textDataArray.length - 1) {
-            history.push("/thankyou");
-            return;
-        }
-        if (!showCountDown) {
-            setTestNumber(testNumber + 1);
-        }
-        console.log("testNumber", testNumber);
-    }, [showCountDown]);
+    const { currentExercise, onCountdownFinish, onFinishExercise, showCountdown } = useSlideControl();
 
-    const customStyles: Array<customStyles> = [
-        {
-            backgroundColor: "black",
-            fontColor: "white",
-            fontFamily: "sans-serif",
-            fontSize: "26px",
-        },
-        {
-            backgroundColor: "white",
-            fontColor: "black",
-            fontFamily: "sans-serif",
-            fontSize: "26px",
-        },
-        {
-            backgroundColor: "pink",
-            fontColor: "white",
-            fontFamily: "arial",
-            fontSize: "46px",
-        },
-        {
-            backgroundColor: "yellow",
-            fontColor: "black",
-            fontFamily: "arial",
-            fontSize: "12px",
-        },
-    ];
+    if (showCountdown) {
+        return (
+            <>
+                <StyledMain className="exercise-page" style={currentExercise.styles}>
+                    <CountDown onFinish={onCountdownFinish} />
+                </StyledMain>
+                <Footer style={currentExercise.styles}>
+                    <PrimaryButton disabled>Ferdig å lese</PrimaryButton>
+                    <TertiaryButton onClick={() => history.push("/thankyou")}>Avbryt testen</TertiaryButton>
+                </Footer>
+            </>
+        );
+    }
 
     return (
-        <section className="exercise">
-            {showCountDown ? (
-                <CountDown setShowCountDown={setShowCountDown} />
-            ) : (
-                <TestGenerator
-                    text={textData.textDataArray[testNumber]}
-                    customStyles={customStyles[testNumber]}
-                    setShowCountDown={setShowCountDown}
-                />
-            )}
-        </section>
+        <>
+            <StyledMain className="exercise-page" style={currentExercise.styles}>
+                <article>{currentExercise.text}</article>
+            </StyledMain>
+            <Footer style={currentExercise.styles}>
+                <PrimaryButton
+                    onClick={() => {
+                        onFinishExercise();
+                    }}
+                    inverted={currentExercise.dark}
+                >
+                    Ferdig å lese
+                </PrimaryButton>
+                <TertiaryButton inverted={currentExercise.dark} onClick={() => history.push("/thankyou")}>
+                    Avbryt testen
+                </TertiaryButton>
+            </Footer>
+        </>
     );
 };
 

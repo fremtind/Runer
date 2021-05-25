@@ -1,8 +1,26 @@
-.thankyou {
-    justify-content: center;
-    margin: 200px 400px;
+@import "@fremtind/jkl-core/variables/all";
+@import "@fremtind/jkl-core/mixins/all";
+
+.thankyou-page {
+    flex: 1;
+    margin: $layout-spacing--medium;
 
     h1 {
-        white-space: nowrap;
+        @include jkl-text-style("desktop/title-large");
+        margin-bottom: $layout-spacing--large;
+    }
+
+    .thankyou {
+        &__intro {
+            p {
+                @include jkl-text-style("desktop/lead");
+                max-width: 35ch;
+                margin-bottom: $layout-spacing--small;
+            }
+
+            & > *:not(h1) {
+                margin-left: $layout-spacing--xl;
+            }
+        }
     }
 }

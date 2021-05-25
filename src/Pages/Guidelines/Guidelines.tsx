@@ -1,10 +1,13 @@
+import { useEffect } from "react";
 import { PrimaryButton } from "@fremtind/jkl-button-react";
-import React, { useEffect } from "react";
+import { useHistory } from "react-router";
 import { Footer } from "../../Components/Footer/Footer";
 import { Nav } from "../../Components/Nav";
 import "./Guidelines.scss";
 
 const Guidelines = () => {
+    const history = useHistory();
+
     useEffect(() => {
         document.title = "Retningslinjer | Runer";
     }, []);
@@ -34,8 +37,7 @@ const Guidelines = () => {
                 </ol>
             </main>
             <Footer>
-                <PrimaryButton>Start testen nå</PrimaryButton>
-                <PrimaryButton>Avbryt</PrimaryButton>
+                <PrimaryButton onClick={() => history.push("/exercise")}>Start testen nå</PrimaryButton>
             </Footer>
         </>
     );

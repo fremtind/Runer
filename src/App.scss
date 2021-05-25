@@ -11,3 +11,20 @@
     display: flex;
     flex-direction: column;
 }
+
+.jkl-button--primary:disabled {
+    background-color: $gra-30;
+    border: rem(1px) solid $gra-30;
+
+    html:not([data-mousenavigation]):not([data-touchnavigation]) &:focus,
+    html:not([data-touchnavigation]) &:hover {
+        transform: none;
+    }
+
+    &:hover,
+    html:not([data-mousenavigation]):not([data-touchnavigation]) &:focus,
+    html[data-touchnavigation] &.jkl-button--pressed {
+        background-color: $gra-30;
+        border-color: $gra-30;
+    }
+}
