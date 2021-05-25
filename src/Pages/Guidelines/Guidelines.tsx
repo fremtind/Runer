@@ -37,7 +37,7 @@ const Guidelines = () => {
                 </ol>
             </main>
             <Footer>
-                <PrimaryButton onClick={() => history.push("/exercise")}>Start testen nå</PrimaryButton>
+                <PrimaryButton onClick={() => history.push("/lesetester")}>Start testen nå</PrimaryButton>
             </Footer>
         </>
     );

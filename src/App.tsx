@@ -14,9 +14,9 @@ const App = () => {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Welcome} />
-                    <Route exact path="/guidelines" component={Guidelines} />
-                    <Route exact path="/exercise" component={Exercise} />
-                    <Route exact path="/thankyou" component={ThankYou} />
+                    <Route exact path="/retningslinjer" component={Guidelines} />
+                    <Route exact path="/lesetester" component={Exercise} />
+                    <Route exact path="/tusen-takk" component={ThankYou} />
                 </Switch>
             </BrowserRouter>
         </Suspense>

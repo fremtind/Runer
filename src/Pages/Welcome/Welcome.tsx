@@ -26,7 +26,7 @@ const Welcome = () => {
                         <PrimaryButton
                             className="welcome__hero__cell--actionBtn"
                             onClick={() => {
-                                history.push("/guidelines");
+                                history.push("/retningslinjer");
                             }}
                         >
                             Kom i gang

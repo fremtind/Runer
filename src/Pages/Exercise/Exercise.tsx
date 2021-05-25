@@ -37,7 +37,7 @@ const useSlideControl = () => {
         console.log(Date.now() / 1000 - state.testStart!.getTime() / 1000);
 
         if (state.activeTest + 1 >= exercises.length) {
-            history.push("/thankyou");
+            history.push("/tusen-takk");
             return;
         }
 
@@ -72,7 +72,9 @@ const Exercise = () => {
                 </StyledMain>
                 <Footer style={currentExercise.styles}>
                     <PrimaryButton disabled>Ferdig å lese</PrimaryButton>
-                    <TertiaryButton onClick={() => history.push("/thankyou")}>Avbryt testen</TertiaryButton>
+                    <TertiaryButton inverted={currentExercise.dark} onClick={() => history.push("/tusen-takk")}>
+                        Avbryt testen
+                    </TertiaryButton>
                 </Footer>
             </>
         );
@@ -92,7 +94,7 @@ const Exercise = () => {
                 >
                     Ferdig å lese
                 </PrimaryButton>
-                <TertiaryButton inverted={currentExercise.dark} onClick={() => history.push("/thankyou")}>
+                <TertiaryButton inverted={currentExercise.dark} onClick={() => history.push("/tusen-takk")}>
                     Avbryt testen
                 </TertiaryButton>
             </Footer>
