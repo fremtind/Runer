@@ -9,7 +9,7 @@
     border-top: 1px solid $gra-30;
 
     // TODO dirty hack to place second item on edge in a reverse 2 column footer
-    & > :last-child {
+    &:not(.footer--single) > :last-child {
         position: absolute;
         right: $layout-spacing--medium;
     }
