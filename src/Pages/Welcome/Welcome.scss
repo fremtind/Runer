@@ -16,7 +16,6 @@
     }
 
     .welcome-hero {
-        border-top: 1px solid $gra-10;
         margin-bottom: $layout-spacing--large;
 
         &:first-of-type {
@@ -36,6 +35,7 @@
             padding: $layout-spacing--medium $layout-spacing--medium;
 
             .welcome-hero {
+                border-top: 1px solid $gra-10;
                 padding-top: $layout-spacing--large;
 
                 &:first-of-type {

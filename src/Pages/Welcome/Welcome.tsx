@@ -57,6 +57,20 @@ const Welcome = () => {
 
                     <section className="welcome-hero  welcome-hero--with-cells">
                         <div className="welcome-hero__cell">
+                            <h2>Hva vil vil oppnå?</h2>
+                            <p>
+                                Funnene fra testen vil føre til en bedre brukeropplevelse og universiell utforming.
+                                Dette vil føre til bedre informerte design avgjørelser i løsningene våre.
+                            </p>
+                            <p>
+                                Vi vil gjøre det lettere å lese og forstå tekster for brukere av våre løsninger. Det vil
+                                føre til at brukere navigerer seg gjennom våre løsninger raskt og enkelt.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section className="welcome-hero  welcome-hero--with-cells">
+                        <div className="welcome-hero__cell">
                             <h2>Hvem er vi?</h2>
                             <p>
                                 Vi er designere og utviklere som brenner for bedre brukeropplevelse for våre brukere. Vi
