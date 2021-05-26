@@ -3,9 +3,12 @@
 );
 
 @import "@fremtind/jkl-core/core.scss";
-@import "@fremtind/jkl-icons/animated-icons.scss";
 @import "@fremtind/jkl-button/button.scss";
+@import "@fremtind/jkl-checkbox/checkbox.scss";
+@import "@fremtind/jkl-icons/animated-icons.scss";
 @import "@fremtind/jkl-logo/logo.scss";
+@import "@fremtind/jkl-radio-button/radio-button.scss";
+@import "@fremtind/jkl-text-input/text-input.scss";
 
 #root {
     min-height: 100vh;

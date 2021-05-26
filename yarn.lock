@@ -1158,7 +1158,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.0", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.0", "@babel/runtime@^7.9.2":
   version "7.14.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
   integrity sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
@@ -1263,6 +1263,24 @@
   dependencies:
     "@fremtind/jkl-core" "^4.21.1"
 
+"@fremtind/jkl-checkbox-react@^1.10.7":
+  version "1.10.7"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-checkbox-react/-/jkl-checkbox-react-1.10.7.tgz#297057a20f964d2f64472d1c29d9ca5b0994a910"
+  integrity sha512-qyBYvJkiMU6Xz6DADKDtuxqXG7+PgpMDhfKU71f6juQ87yO7RyurHyFYrQWcbh1lm10jf8MrhGPPH3Gtp0nTAw==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-checkbox" "^1.4.15"
+    "@fremtind/jkl-core" "^4.21.1"
+    classnames "^2.2.6"
+    nanoid "^3.1.22"
+
+"@fremtind/jkl-checkbox@^1.4.15":
+  version "1.4.15"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-checkbox/-/jkl-checkbox-1.4.15.tgz#24d4901a0a4c7369b64480a6acad5f58b4c2fb08"
+  integrity sha512-o4gC5waEtohqRGcXnqemAsUmP/6G2DFoJG4Cv6Sv0RPztVYVrsN3VworlsG5mECwDdM/7FQQO+2RlAZt27+r0Q==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
+
 "@fremtind/jkl-core@^4.19.0", "@fremtind/jkl-core@^4.21.1":
   version "4.21.1"
   resolved "https://registry.yarnpkg.com/@fremtind/jkl-core/-/jkl-core-4.21.1.tgz#4b821752ed90300492202c5470814138721f1862"
@@ -1270,6 +1288,38 @@
   dependencies:
     "@babel/runtime" "^7.9.0"
     classnames "^2.2.6"
+
+"@fremtind/jkl-field-group-react@^1.6.6":
+  version "1.6.6"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-field-group-react/-/jkl-field-group-react-1.6.6.tgz#258c259db95600bcc97f268715f6d2b0cc224a1b"
+  integrity sha512-1747MR6ppGqrZ3f0Da36Uf57alb+mtBR9R2xeweOlfbGZAF3XpXAKpa4mLKc6zbu+5xK+0tfoYrflH3SL+SvkQ==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-field-group" "^1.1.46"
+    "@fremtind/jkl-typography-react" "^2.5.6"
+    classnames "^2.2.6"
+
+"@fremtind/jkl-field-group@^1.1.46":
+  version "1.1.46"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-field-group/-/jkl-field-group-1.1.46.tgz#915eb143d5612fb6186fd44da330e4dcf42984b4"
+  integrity sha512-sjUnE01jC1p4JAKM6gFljav8jGL7AprWfNGpRPD3TGmKL1cwXGDdfncnlI9pvLenCyXmT/iuadgCeJAKAei+eg==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
+
+"@fremtind/jkl-icon-button-react@^0.4.10":
+  version "0.4.10"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-icon-button-react/-/jkl-icon-button-react-0.4.10.tgz#d815d5a82c5634d6cc8eae147117878eb8d5858f"
+  integrity sha512-fUZjhMjPeU8B7740YlvCYWr2wskjsvJB6SqxgjkXLsF0BOY6Vf9qz/LsTq4C8reJeFDyKD3vt4L9W/6ufqMRgg==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-icon-button" "^0.2.40"
+
+"@fremtind/jkl-icon-button@^0.2.40":
+  version "0.2.40"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-icon-button/-/jkl-icon-button-0.2.40.tgz#aef58914363147a763a4be097de225bb553fc6ee"
+  integrity sha512-iWHu/7KuE1VIsOexQc3SG8dNxyk3EhejUFcHKl/XAFuKgj12Rfl2DVq3m1lRuQtieQJeBu8paqEFKZcw2bKbVQ==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
 
 "@fremtind/jkl-icons-react@^1.4.2":
   version "1.4.2"
@@ -1318,6 +1368,55 @@
   integrity sha512-49iVJnkSr5JQvhgh8qbZOm8i5v0u3evHrbQH1knw5/PFaVTZ8RRk9z+gE//nLBWr2zYbuVrMUrdTpBsX3jgCSw==
   dependencies:
     "@fremtind/jkl-core" "^4.21.1"
+
+"@fremtind/jkl-radio-button-react@^1.9.7":
+  version "1.9.7"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-radio-button-react/-/jkl-radio-button-react-1.9.7.tgz#26694cc46f5cb5dd287c5d2e418352f8db2b33fd"
+  integrity sha512-ouzM8RbCSzAPIsSxCi54t5YQ+D/sn49JwpSCdHX9tiuohyjxxmjHg7Q6/QG2B69J//RNkWvykh7DOMRQ/XLnvQ==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-field-group-react" "^1.6.6"
+    "@fremtind/jkl-radio-button" "^1.4.12"
+    classnames "^2.2.6"
+    nanoid "^3.1.22"
+
+"@fremtind/jkl-radio-button@^1.4.12":
+  version "1.4.12"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-radio-button/-/jkl-radio-button-1.4.12.tgz#9498e983cb44ccacbec9a69924bb252e409d2b33"
+  integrity sha512-AP9beqnwrBpHMq0CGAR35oTOpkct0sQqSgoGWKF8/55fBMA4eUitC5n8SEOgFblyOqRZFLiVJmu75+BO8iw8oA==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
+
+"@fremtind/jkl-text-input-react@^3.8.13":
+  version "3.8.13"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-text-input-react/-/jkl-text-input-react-3.8.13.tgz#a802fd403f33bb9133683538ddfa546698b64df3"
+  integrity sha512-JQt2cbcEDZ4YyQ+VExQc94YnVSCkkl/lXP7fCLWmEtv/2lQ5uZo7xXDF1z65qxcHZiw6piZQ/Kl2nxKZau77Aw==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-icon-button-react" "^0.4.10"
+    "@fremtind/jkl-icons-react" "^1.4.2"
+    "@fremtind/jkl-text-input" "^2.2.17"
+    "@fremtind/jkl-typography-react" "^2.5.6"
+    classnames "^2.2.6"
+    downshift "^6.0.5"
+    match-sorter "^5.0.0"
+    nanoid "^3.1.22"
+
+"@fremtind/jkl-text-input@^2.2.17":
+  version "2.2.17"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-text-input/-/jkl-text-input-2.2.17.tgz#518373565627973faa0a83b0b6cfc3e46e66b444"
+  integrity sha512-yWjVueD+sjrkB9RZSghv6CELP0I2FSJsSwDSTkY+9+BCDzarsgA/dyZHWSVgqcAnKVxc4iqLH5OKyuW+sEI6Xw==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
+
+"@fremtind/jkl-typography-react@^2.5.6":
+  version "2.5.6"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-typography-react/-/jkl-typography-react-2.5.6.tgz#c4a3ffe96440b35cb313ba4015a2c558fb1026fd"
+  integrity sha512-Imbvx0UEbI7ugW1LOXvY0yODHRiCGP5/Qlxj1o+G6Y6vd48L98I+I8dsiKdaikeB80j3o++fEixKY04VEEFAVg==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-core" "^4.21.1"
+    classnames "^2.2.6"
 
 "@fremtind/jkl-webfonts@^1.1.7":
   version "1.1.7"
@@ -3579,6 +3678,11 @@ compression@^1.7.4:
     safe-buffer "5.1.2"
     vary "~1.1.2"
 
+compute-scroll-into-view@^1.0.17:
+  version "1.0.17"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz#6a88f18acd9d42e9cf4baa6bec7e0522607ab7ab"
+  integrity sha512-j4dx+Fb0URmzbwwMUrhqWM2BEWHdFGx+qZ9qqASHRPqvTYdqvWnHg0H1hIbcyLnvgnoNAVMlwkepyqM3DaIFUg==
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -4340,6 +4444,16 @@ dotenv@8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
+downshift@^6.0.5:
+  version "6.1.3"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/downshift/-/downshift-6.1.3.tgz#e794b7805d24810968f21e81ad6bdd9f3fdc40da"
+  integrity sha512-RA1MuaNcTbt0j+sVLhSs8R2oZbBXYAtdQP/V+uHhT3DoDteZzJPjlC+LQVm9T07Wpvo84QXaZtUCePLDTDwGXg==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    compute-scroll-into-view "^1.0.17"
+    prop-types "^15.7.2"
+    react-is "^17.0.2"
 
 duplexer@^0.1.1:
   version "0.1.2"
@@ -7190,6 +7304,14 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+match-sorter@^5.0.0:
+  version "5.0.0"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/match-sorter/-/match-sorter-5.0.0.tgz#c32eacdad0ae0699e82b18fd0a8dc0113e71768d"
+  integrity sha512-q0O1lupUikgSwuefn91pVzmF5YQJHQprltxuaipDE5aAhXDHUkwtxfpvP5utTjoe3hpxgWaFPEiCJf8IsF6T+Q==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    remove-accents "0.4.2"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -9185,12 +9307,17 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
+react-hook-form@^7.6.7:
+  version "7.6.7"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/react-hook-form/-/react-hook-form-7.6.7.tgz#77f1b47ebf072e222d11707bb14750498f471d40"
+  integrity sha512-HzYgmUyWdhQRYEuKHOWybVF/anM9s2sPVIoskUvGdMjJaIBOiFIhNVNZuBMSg81LN7tt9Z4A/jFwbMi/kmaZ5A==
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-is@^17.0.1:
+react-is@^17.0.1, react-is@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
@@ -9475,6 +9602,11 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+remove-accents@0.4.2:
+  version "0.4.2"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/remove-accents/-/remove-accents-0.4.2.tgz#0a43d3aaae1e80db919e07ae254b285d9e1c7bb5"
+  integrity sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
