@@ -23,4 +23,26 @@
             }
         }
     }
+
+    @include small-device {
+        margin: $layout-spacing--xs;
+
+        h1 {
+            @include jkl-text-style("compact/title-large");
+            margin-bottom: $layout-spacing--small;
+        }
+
+        .thankyou {
+            &__intro {
+                p {
+                    @include jkl-text-style("compact/lead");
+                    max-width: unset;
+                }
+
+                & > *:not(h1) {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
 }

@@ -1,4 +1,5 @@
 @import "@fremtind/jkl-core/variables/all";
+@import "@fremtind/jkl-core/mixins/all";
 
 .footer {
     display: flex;
@@ -12,5 +13,14 @@
     &:not(.footer--single) > :last-child {
         position: absolute;
         right: $layout-spacing--medium;
+    }
+
+    @include small-device {
+        justify-content: space-between;
+        padding: $layout-spacing--small $layout-spacing--xs;
+
+        &:not(.footer--single) > :last-child {
+            position: unset;
+        }
     }
 }

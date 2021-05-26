@@ -36,4 +36,38 @@
         margin-left: $layout-spacing--xxl;
         margin-bottom: $component-spacing--small;
     }
+
+    @include small-device {
+        & > * {
+            margin-left: $layout-spacing--xs;
+            margin-right: $layout-spacing--xs;
+        }
+
+        h1 {
+            @include jkl-text-style("compact/title-small");
+            margin-top: $layout-spacing--medium;
+            margin-bottom: $layout-spacing--small;
+        }
+
+        p {
+            @include jkl-text-style("compact/body");
+            max-width: unset;
+        }
+
+        ol {
+            @include jkl-text-style("compact/lead");
+            max-width: unset;
+
+            li {
+                margin-bottom: $layout-spacing--medium;
+            }
+        }
+
+        p,
+        ol {
+            margin-left: $layout-spacing--xs;
+            margin-right: $layout-spacing--xs;
+            margin-bottom: $component-spacing--small;
+        }
+    }
 }

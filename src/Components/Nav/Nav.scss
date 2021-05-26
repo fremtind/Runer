@@ -11,4 +11,9 @@
     .jkl-logo {
         height: rem(24px);
     }
+
+    @include small-device {
+        padding: $layout-spacing--medium $layout-spacing--xs;
+        position: relative;
+    }
 }
