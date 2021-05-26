@@ -16,28 +16,20 @@ const Guidelines = () => {
         <>
             <Nav />
             <main className="guidelines-page">
-                <h1>Slik vil testen foregå</h1>
-                <p>
-                    Du vil bli presentert ulike tekster i denne testen med ulike omstendigheter. Det telles ned før hver
-                    tekst presenteres, du kan avbryte testen når du vil. Til slutt vil du bli bedt om å svare på et par
-                    spørsmål.
-                </p>
+                <h1>Slik foregår det</h1>
                 <ol>
-                    <li>
-                        Første side vil være en tekst der vi setter en “baseline”. Trykk videre når du er ferdig med å
-                        lese.
-                    </li>
-                    <li>
-                        Du blir presentert første test av Fremtind fonten, les nøye og trykk videre når du er ferdig.
-                    </li>
-                    <li>
-                        Når du er ferdig med alle casene, for du oversikt over hvor lang tid du brukte og blir bedt om å
-                        svare på et par spørsmål.
-                    </li>
+                    <li>Begynn å lese når teksten dukker opp, rett etter nedtellingen.</li>
+                    <li>Les i eget tempo, så ta deg tid til å lese hver tekst. </li>
+                    <li>Trykk på «Ferdig å lese» med en gang du er ferdig å lese..</li>
                 </ol>
+                <p>
+                    Det vil til sammen være «X-antall» omstendigheter du skal lese i. Ha gjerne musepekeren, eller en
+                    finger, klar på «Ferdig å lese»-knappen så blir målingene mer nøyaktige. Du kan avbryte testen om du
+                    vil, men om du holder ut til slutt, vil du bli bedt om å svare på et par spørsmål.
+                </p>
             </main>
             <Footer>
-                <PrimaryButton onClick={() => history.push("/lesetester")}>Start testen nå</PrimaryButton>
+                <PrimaryButton onClick={() => history.push("/lesetester")}>Start nå</PrimaryButton>
             </Footer>
         </>
     );
