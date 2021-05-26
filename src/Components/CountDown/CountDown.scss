@@ -4,7 +4,7 @@
 
 .countdown {
     max-width: 664px;
-    margin-top: $layout-spacing--large;
+    margin-top: $layout-spacing--xxl;
     margin-left: auto;
     margin-right: auto;
 
@@ -14,5 +14,9 @@
 
     &__number {
         font-size: 268px;
+    }
+
+    @include small-device {
+        margin-top: $layout-spacing--medium;
     }
 }
