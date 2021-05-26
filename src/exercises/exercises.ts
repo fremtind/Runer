@@ -15,8 +15,7 @@ const textData: { dark: boolean; styles: CSSProperties; text: string }[] = [
             fontFamily: "sans-serif",
             fontSize: "26px",
         },
-        text: `
-            Hva lykke er?
+        text: `Hva lykke er?
             Gå på en gressgrodd setervei
             i tynne, tynne sommerklær,
             klø sine ferske myggstikk
@@ -40,8 +39,7 @@ const textData: { dark: boolean; styles: CSSProperties; text: string }[] = [
             fontFamily: "sans-serif",
             fontSize: "26px",
         },
-        text: `
-            Hva lykke er?
+        text: `Hva lykke er?
             Gå på en gressgrodd setervei
             i tynne, tynne sommerklær,
             klø sine ferske myggstikk
@@ -65,8 +63,7 @@ const textData: { dark: boolean; styles: CSSProperties; text: string }[] = [
             fontFamily: "arial",
             fontSize: "46px",
         },
-        text: `
-            Hva lykke er?
+        text: `Hva lykke er?
             Gå på en gressgrodd setervei
             i tynne, tynne sommerklær,
             klø sine ferske myggstikk
@@ -90,8 +87,7 @@ const textData: { dark: boolean; styles: CSSProperties; text: string }[] = [
             fontFamily: "arial",
             fontSize: "12px",
         },
-        text: `
-            Hva lykke er?
+        text: `Hva lykke er?
             Gå på en gressgrodd setervei
             i tynne, tynne sommerklær,
             klø sine ferske myggstikk
