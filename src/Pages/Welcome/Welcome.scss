@@ -88,15 +88,14 @@
 .welcome-footer {
     color: $gra-10;
     background-color: $gra-100;
-    padding-left: $layout-spacing--medium;
-    padding-right: $layout-spacing--medium;
+    padding: $layout-spacing--medium;
     position: relative;
     display: flex;
 
     &:before {
         content: "";
         border-top: 1px solid $gra-10;
-        top: -$layout-spacing--small;
+        top: 0;
         width: calc(100% - calc(2 *#{$layout-spacing--medium}));
         position: absolute;
         left: $layout-spacing--medium;
