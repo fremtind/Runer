@@ -1302,6 +1302,23 @@
   dependencies:
     "@fremtind/jkl-core" "^4.21.1"
 
+"@fremtind/jkl-logo-react@^3.3.8":
+  version "3.3.8"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-logo-react/-/jkl-logo-react-3.3.8.tgz#2fd8d2f2ec6a478a5d74d8cf0446e52562dfb1e3"
+  integrity sha512-MRGxZvWpcidKTjrpLw1q5YttAziSa4DbtRrQkWDvxSTvSKkEPDBxX9taQkBIeTfO0JKeSDZn1su6UuON4EaqXw==
+  dependencies:
+    "@babel/runtime" "^7.9.0"
+    "@fremtind/jkl-logo" "^2.2.13"
+    classnames "^2.2.6"
+    nanoid "^3.1.22"
+
+"@fremtind/jkl-logo@^2.2.13":
+  version "2.2.13"
+  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@fremtind/jkl-logo/-/jkl-logo-2.2.13.tgz#265a1a72428e1e3d25da65a4570945f7c1a2dfd2"
+  integrity sha512-49iVJnkSr5JQvhgh8qbZOm8i5v0u3evHrbQH1knw5/PFaVTZ8RRk9z+gE//nLBWr2zYbuVrMUrdTpBsX3jgCSw==
+  dependencies:
+    "@fremtind/jkl-core" "^4.21.1"
+
 "@fremtind/jkl-webfonts@^1.1.7":
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/@fremtind/jkl-webfonts/-/jkl-webfonts-1.1.7.tgz#1594785dae4e3370cabe1f2b4368f9806abd8cb0"
@@ -7467,7 +7484,7 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
 
-nanoid@^3.1.23:
+nanoid@^3.1.22, nanoid@^3.1.23:
   version "3.1.23"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
   integrity sha512-FiB0kzdP0FFVGDKlRLEQ1BgDzU87dy5NnzjeW9YZNt+/c3+q82EQDUwniSAUxp/F0gFNI1ZhKU1FqYsMuqZVnw==

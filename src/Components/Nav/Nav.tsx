@@ -1,12 +1,13 @@
-import { Link } from "@fremtind/jkl-core";
+import { Logo } from "@fremtind/jkl-logo-react";
+import { Link } from "react-router-dom";
 import "./Nav.scss";
 
 export const Nav = () => {
     return (
         <nav className="heading-nav">
-            <p className="heading-nav__brand">Runer</p>
-            <p className="heading-nav__story">En lesbarhetstest laget av Fremtind</p>
-            <Link href="https://jokul.fremtind.no">Gå til Designsystemet</Link>
+            <Link to="/" title="Til forsiden">
+                <Logo isSymbol centered={false} />
+            </Link>
         </nav>
     );
 };
