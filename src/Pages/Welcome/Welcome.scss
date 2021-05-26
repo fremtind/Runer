@@ -84,3 +84,40 @@
         }
     }
 }
+
+.welcome-footer {
+    color: $gra-10;
+    background-color: $gra-100;
+    padding-left: $layout-spacing--medium;
+    padding-right: $layout-spacing--medium;
+    position: relative;
+    display: flex;
+
+    &:before {
+        content: "";
+        border-top: 1px solid $gra-10;
+        top: -$layout-spacing--small;
+        width: calc(100% - calc(2 *#{$layout-spacing--medium}));
+        position: absolute;
+        left: $layout-spacing--medium;
+    }
+
+    h2 {
+        @include jkl-text-style("desktop/heading-small");
+        margin-right: $layout-spacing--medium;
+    }
+
+    p {
+        @include jkl-text-style("desktop/body");
+        flex: 1;
+    }
+
+    ul {
+        justify-self: end;
+        list-style: none;
+
+        li {
+            padding-bottom: $layout-spacing--small;
+        }
+    }
+}
