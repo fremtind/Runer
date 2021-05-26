@@ -83,6 +83,105 @@
             margin-bottom: $layout-spacing--medium;
         }
     }
+
+    @include small-device {
+        & > * {
+            margin-left: 0;
+            margin-right: 0;
+
+            &:not(.welcome-hero) {
+                margin-left: $layout-spacing--xs;
+                margin-right: $layout-spacing--xs;
+            }
+        }
+
+        h1 {
+            @include jkl-text-style("compact/title-small");
+            max-width: 100%;
+            margin-top: $layout-spacing--medium;
+            margin-bottom: $layout-spacing--medium;
+        }
+
+        .welcome-hero {
+            margin-bottom: $layout-spacing--medium;
+
+            &:first-of-type {
+                margin-bottom: unset;
+            }
+
+            &--with-cells {
+                display: flex;
+                flex-direction: column;
+            }
+
+            p,
+            button {
+                margin-left: $layout-spacing--xs;
+                margin-right: $layout-spacing--xs;
+            }
+
+            &__inverted-wrapper {
+                background-color: $gra-100;
+                color: $gra-10;
+                margin-left: 0;
+                margin-right: 0;
+                flex: 1;
+                padding: $layout-spacing--xs;
+
+                .welcome-hero {
+                    padding-top: unset;
+                    border-top: 1px solid $gra-10;
+
+                    &:first-of-type {
+                        border-top: unset;
+                        margin-top: unset;
+                    }
+
+                    p,
+                    button {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &__cell {
+                flex: 1;
+                position: relative;
+                max-width: 100%;
+            }
+
+            &__img {
+                width: unset;
+                max-width: 100%;
+                margin-top: $layout-spacing--xl;
+                margin-bottom: -0.2rem;
+
+                &--vertical-push {
+                    position: unset;
+                    top: unset;
+                    left: unset;
+                }
+            }
+
+            p {
+                @include jkl-text-style("compact/body");
+
+                margin-bottom: $layout-spacing--small;
+                max-width: 51ch;
+
+                &:last-of-type {
+                    margin-bottom: $layout-spacing--medium;
+                }
+            }
+
+            h2 {
+                @include jkl-text-style("compact/title-small");
+                margin-top: $layout-spacing--medium;
+                margin-bottom: $layout-spacing--medium;
+            }
+        }
+    }
 }
 
 .welcome-footer {
@@ -114,9 +213,25 @@
     ul {
         justify-self: end;
         list-style: none;
+        @include jkl-text-style("desktop/body");
 
         li {
             padding-bottom: $layout-spacing--small;
+        }
+    }
+
+    @include small-device {
+        flex-direction: column;
+        padding: $layout-spacing--xs;
+        padding-top: $layout-spacing--medium;
+
+        &:before {
+            left: $layout-spacing--xs;
+            width: calc(100% - calc(2 *#{$layout-spacing--xs}));
+        }
+
+        & > *:not(:last-child) {
+            margin-bottom: $layout-spacing--medium;
         }
     }
 }
