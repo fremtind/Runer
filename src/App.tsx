@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { SessionProvider } from "./common/sessionContext";
 
 import "./App.scss";
 
@@ -12,12 +13,14 @@ const App = () => {
     return (
         <Suspense fallback={<div />}>
             <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={Welcome} />
-                    <Route exact path="/retningslinjer" component={Guidelines} />
-                    <Route exact path="/lesetester" component={Exercise} />
-                    <Route exact path="/tusen-takk" component={ThankYou} />
-                </Switch>
+                <SessionProvider>
+                    <Switch>
+                        <Route exact path="/" component={Welcome} />
+                        <Route exact path="/retningslinjer" component={Guidelines} />
+                        <Route exact path="/lesetester" component={Exercise} />
+                        <Route exact path="/tusen-takk" component={ThankYou} />
+                    </Switch>
+                </SessionProvider>
             </BrowserRouter>
         </Suspense>
     );

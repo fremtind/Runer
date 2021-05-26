@@ -47,16 +47,7 @@ const ThankYou = () => {
                             label="Hvor gammel er du?"
                             width="6rem"
                             type="number"
-                            {...register("age", {
-                                min: {
-                                    value: 3,
-                                    message: "Så ung tror vi ikke du er",
-                                },
-                                max: {
-                                    value: 150,
-                                    message: "Du har holdt deg godt!",
-                                },
-                            })}
+                            {...register("age")}
                         />
 
                         <RadioButtons
