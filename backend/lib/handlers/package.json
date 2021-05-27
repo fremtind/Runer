@@ -1,0 +1,11 @@
+{
+  "name": "@fremtind/my-handler",
+  "version": "1.0.0",
+  "description": "SAM requires a package.json file with handler function.",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-cdk/aws-dynamodb": "^1.106.1",
+    "@aws-sdk/client-dynamodb": "^3.17.0",
+    "aws-sdk": "^2.916.0"
+  }
+}

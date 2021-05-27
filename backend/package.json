@@ -1,0 +1,42 @@
+{
+    "name": "runer-cdk",
+    "version": "1.0.0",
+    "description": "CDK definition for the Runer legibility project",
+    "scripts": {
+        "compile": "tsc -p tsconfig.json",
+        "build": "npm run compile && jest && npm run cdk-synth",
+        "cdk-synth": "cdk synth > template.yml",
+        "watch": "tsc -w",
+        "test": "npm run compile && jest",
+        "dev": "npm run compile && npm run cdk-synth"
+    },
+    "author": "Designsystemteamet",
+    "dependencies": {},
+    "devDependencies": {
+        "@aws-cdk/assert": "1.106.1",
+        "@aws-cdk/aws-apigateway": "1.106.1",
+        "@aws-cdk/aws-certificatemanager": "1.106.1",
+        "@aws-cdk/aws-cloudfront": "1.106.1",
+        "@aws-cdk/aws-dynamodb": "1.106.1",
+        "@aws-cdk/aws-iam": "1.106.1",
+        "@aws-cdk/aws-lambda": "1.106.1",
+        "@aws-cdk/aws-s3": "1.106.1",
+        "@aws-cdk/aws-s3-deployment": "1.106.1",
+        "@aws-cdk/core": "1.106.1",
+        "@types/jest": "26.0.23",
+        "@types/node": "15.6.1",
+        "@typescript-eslint/eslint-plugin": "4.25.0",
+        "@typescript-eslint/parser": "4.25.0",
+        "aws-cdk": "1.106.1",
+        "eslint": "7.27.0",
+        "eslint-config-google": "0.14.0",
+        "eslint-config-prettier": "8.3.0",
+        "eslint-plugin-prettier": "3.4.0",
+        "jest": "27.0.1",
+        "prettier": "2.3.0",
+        "source-map-support": "0.5.19",
+        "ts-jest": "27.0.1",
+        "ts-node": "10.0.0",
+        "typescript": "4.3.2"
+    }
+}

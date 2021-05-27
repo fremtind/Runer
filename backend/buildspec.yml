@@ -1,0 +1,29 @@
+version: 0.2
+
+env:
+  parameter-store:
+    TOOLING_BUCKET: "/cct/pipeline-tooling-bucket"
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+      nodejs: 12
+    commands:
+      - aws s3 cp $TOOLING_BUCKET . --quiet --recursive
+      - bash install.sh
+  pre_build:
+    commands:
+      - bash pre-build.sh
+  build:
+    commands:
+      - echo "Building, linting and testing app"
+      - bash npm-build.sh
+      - bash adf.sh transform
+  post_build:
+    commands:
+      - bash post-build.sh cfn-guard/fremtind.ruleset template.yml
+artifacts:
+  files:
+    - 'template.yml'
+    - 'params/*'
