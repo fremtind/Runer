@@ -13,7 +13,7 @@ import { Link, NavLink } from "@fremtind/jkl-core";
 interface FormData {
     age: string;
     eyesight: string;
-    aid: string;
+    aid: string[];
 }
 
 const ThankYou = () => {
@@ -26,7 +26,10 @@ const ThankYou = () => {
 
     const onSubmit = (formData: FormData) => {
         httpPost(clientId, testSession, {
-            questionaire: formData,
+            questionaire: {
+                ...formData,
+                aid: formData.aid.join(","),
+            },
         });
     };
 
