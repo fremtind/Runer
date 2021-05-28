@@ -4,15 +4,23 @@ import { PrimaryButton, TertiaryButton } from "@fremtind/jkl-button-react";
 import styled from "styled-components";
 import { Footer } from "../../Components/Footer";
 import CountDown from "../../Components/CountDown";
-import exercises from "../../exercises/exercises";
+import rawExercises, { baseLine } from "../../exercises/exercises";
+import texts from "../../exercises/texts";
 import "./Exercise.scss";
+import { httpPost } from "../../common/http";
+import { useSession } from "../../common/sessionContext";
 
 const StyledMain = styled.main((props: CSSProperties) => ({
     ...props,
 }));
 
+// randomize order
+const rngExercises = rawExercises.sort(() => 0.5 - Math.random());
+const exercises = [baseLine, ...rngExercises];
+
 const useSlideControl = () => {
     const history = useHistory();
+    const { clientId, testSession } = useSession();
 
     const [state, setState] = useState<{
         showCountdown: boolean;
@@ -24,6 +32,13 @@ const useSlideControl = () => {
         testStart: null,
     });
 
+    const currentExercise = useMemo(() => {
+        return {
+            ...exercises[state.activeTest],
+            text: texts[state.activeTest % texts.length],
+        };
+    }, [state]);
+
     const onCountdownFinish = () => {
         setState({
             ...state,
@@ -33,8 +48,13 @@ const useSlideControl = () => {
     };
 
     const onFinishExercise = () => {
-        // TODO send data to backend
-        console.log(Date.now() / 1000 - state.testStart!.getTime() / 1000);
+        httpPost(clientId, testSession, {
+            testResult: {
+                duration: Date.now() / 1000 - state.testStart!.getTime() / 1000,
+                styles: JSON.stringify(currentExercise.styles),
+                text: currentExercise.text,
+            },
+        });
 
         if (state.activeTest + 1 >= exercises.length) {
             history.push("/tusen-takk");
@@ -47,10 +67,6 @@ const useSlideControl = () => {
             testStart: null,
         });
     };
-
-    const currentExercise = useMemo(() => {
-        return exercises[state.activeTest];
-    }, [state]);
 
     return { currentExercise, showCountdown: state.showCountdown, onCountdownFinish, onFinishExercise };
 };

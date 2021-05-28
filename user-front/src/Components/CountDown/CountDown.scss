@@ -7,6 +7,7 @@
     margin-top: $layout-spacing--xxl;
     margin-left: auto;
     margin-right: auto;
+    line-height: normal;
 
     &__infoText {
         @include jkl-text-style("desktop/heading-small");

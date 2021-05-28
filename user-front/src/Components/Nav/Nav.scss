@@ -3,10 +3,13 @@
 
 .heading-nav {
     padding: $layout-spacing--medium;
-    position: sticky;
-    top: 0;
-    z-index: 2;
     background-color: $hvit;
+    display: flex;
+    justify-content: space-between;
+
+    &--varde {
+        background-color: $varde;
+    }
 
     .jkl-logo {
         height: rem(24px);
