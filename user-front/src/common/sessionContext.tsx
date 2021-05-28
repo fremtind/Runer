@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router";
 import { getSessionCookie, setSessionCookie } from "./cookie";
 
@@ -11,6 +11,7 @@ interface State {
 const SessionContext = React.createContext<State | undefined>(undefined);
 
 const SessionProvider: React.FC = ({ children }) => {
+    const [testSession] = useState(nanoid());
     let cookie = getSessionCookie();
 
     const { search } = useLocation();
@@ -19,7 +20,7 @@ const SessionProvider: React.FC = ({ children }) => {
 
     setSessionCookie(cookie);
 
-    const value = { clientId: cookie, testSession: nanoid() };
+    const value = { clientId: cookie, testSession };
     return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
 };
 
