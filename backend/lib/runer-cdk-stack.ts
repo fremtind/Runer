@@ -101,7 +101,7 @@ export class RunerCdkStack extends Stack {
         });
 
         new BucketDeployment(this, "DeployStaticWebsite", {
-            sources: [Source.asset("./website")],
+            sources: [Source.asset("../user-front/build")],
             destinationBucket: bucket,
         });
 
@@ -114,16 +114,22 @@ export class RunerCdkStack extends Stack {
             }),
         );
 
-        const cert = Certificate.fromCertificateArn(this, "RunerFremtindIoCertificate");
+        const ioCert = Certificate.fromCertificateArn(this, "RunerFremtindIoCertificate", process.env.RUNER_IO_CERT!);
+
+        // const noCert = Certificate.fromCertificateArn(
+        //     this,
+        //     "RunerFremtindNoCertificate",
+        //     "arn:aws:acm:us-east-1:126372280149:certificate/f6e6d4a0-4c5d-4be7-87ff-dcdd3e51f47d",
+        // );
 
         new CloudFrontWebDistribution(this, "RunerCloudFront", {
             comment: "CDN Runer web app",
             defaultRootObject: "index.html",
             viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
             viewerCertificate: {
-                aliases: ["runer.fremtind.io"],
+                aliases: ["runer.fremtind.io" /* , "runer.fremtind.no" */],
                 props: {
-                    acmCertificateArn: cert.certificateArn,
+                    acmCertificateArn: ioCert.certificateArn,
                     sslSupportMethod: "sni-only",
                 },
             },
