@@ -21,9 +21,8 @@ const Welcome = () => {
                 <section className="welcome-hero welcome-hero--with-cells">
                     <div className="welcome-hero__cell">
                         <p>
-                            Dette er en test av skrifttypen vår, “Fremtind Grotesk”. På de neste sidene vil du bli bedt
-                            om å lese tekster med ulike skriftstørrelser og bakgrunnsfarger Resultatet hjelper oss å ta
-                            bedre, mer leservennlige, valg. Det hele er 100% anonymt.{" "}
+                            Du vil bli presentert ulike tekster med ulike omstendigheter. Vi tester ikke hvor lang tid
+                            du bruker på å lese, men hvor lang tid det tar å lese under de ulike omstendighetene.
                         </p>
                         <PrimaryButton
                             className="welcome__hero__cell--actionBtn"
