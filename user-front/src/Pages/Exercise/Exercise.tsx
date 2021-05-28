@@ -51,8 +51,19 @@ const useSlideControl = () => {
         httpPost(clientId, testSession, {
             testResult: {
                 duration: Date.now() / 1000 - state.testStart!.getTime() / 1000,
-                styles: JSON.stringify(currentExercise.styles),
+                styles: currentExercise.styles,
                 text: currentExercise.text,
+                metadata: {
+                    resolution: {
+                        height: window.screen.height * window.devicePixelRatio,
+                        width: window.screen.width * window.devicePixelRatio,
+                    },
+                    windowSize: {
+                        height: window.screen.height,
+                        width: window.screen.width,
+                    },
+                    pixelRatio: window.devicePixelRatio,
+                },
             },
         });
 

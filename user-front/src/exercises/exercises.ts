@@ -3,14 +3,15 @@ import { CSSProperties } from "react";
 /**
  * dark: definerer hvorvidt knappene skal være inverted eller ikke i forbindelse med mørk/lys bakgrunn
  * styles: CSS-objekt stiler som legges på selve siden
+ * ! Font family kreves på alle stiler fordi dynamodb er teit
  */
 
-interface Test {
+export interface Exercise {
     dark: boolean;
-    styles: CSSProperties;
+    styles: Pick<CSSProperties, "backgroundColor" | "color" | "fontFamily" | "fontSize" | "lineHeight">;
 }
 
-export const baseLine: Test = {
+export const baseLine: Exercise = {
     dark: false,
     styles: {
         backgroundColor: "white",
@@ -21,7 +22,7 @@ export const baseLine: Test = {
     },
 };
 
-const textData: Test[] = [
+const textData: Exercise[] = [
     {
         dark: false,
         styles: {
@@ -29,6 +30,7 @@ const textData: Test[] = [
             color: "black",
             fontSize: "20px",
             lineHeight: "32px",
+            fontFamily: "Fremtind Grotesk",
         },
     },
     {
@@ -38,6 +40,7 @@ const textData: Test[] = [
             color: "white",
             fontSize: "20px",
             lineHeight: "32px",
+            fontFamily: "Fremtind Grotesk",
         },
     },
     {
@@ -47,6 +50,7 @@ const textData: Test[] = [
             color: "black",
             fontSize: "16px",
             lineHeight: "24px",
+            fontFamily: "Fremtind Grotesk",
         },
     },
 ];

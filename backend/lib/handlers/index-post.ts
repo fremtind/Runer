@@ -6,12 +6,28 @@ interface SessionTestResult {
     client_id: string;
     session_id: string;
     testResult: {
-        styles: any;
+        styles: {
+            backgroundColor: string;
+            color: string;
+            fontFamily: string;
+            fontSize: string;
+            lineHeight: string;
+        };
         text: string;
         duration: number;
+        metadata: {
+            resolution: {
+                height: number;
+                width: number;
+            };
+            windowSize: {
+                height: number;
+                width: number;
+            };
+            pixelRatio: number;
+        };
     };
 }
-
 interface QuestionareResult {
     client_id: string;
     session_id: string;
@@ -51,8 +67,6 @@ const nowStr = now.toISOString();
 export const handler: any = async (event: any, _context: any, callback: any) => {
     const requestBody: SessionTestResult | QuestionareResult = JSON.parse(event.body);
 
-    console.log(requestBody);
-
     let body;
     let statusCode = "200";
     const headers = {
@@ -89,13 +103,53 @@ export const handler: any = async (event: any, _context: any, callback: any) => 
                                     {
                                         M: {
                                             styles: {
-                                                S: requestBody.testResult.styles,
+                                                M: {
+                                                    backgroundColor: {
+                                                        S: requestBody.testResult.styles.backgroundColor,
+                                                    },
+                                                    color: {
+                                                        S: requestBody.testResult.styles.color,
+                                                    },
+                                                    fontSize: {
+                                                        S: requestBody.testResult.styles.fontSize,
+                                                    },
+                                                    lineHeight: {
+                                                        S: requestBody.testResult.styles.lineHeight,
+                                                    },
+                                                },
                                             },
                                             text: {
                                                 S: requestBody.testResult.text,
                                             },
                                             duration: {
                                                 N: requestBody.testResult.duration.toString(),
+                                            },
+                                            metadata: {
+                                                M: {
+                                                    resolution: {
+                                                        M: {
+                                                            height: {
+                                                                N: requestBody.testResult.metadata.resolution.height.toString(),
+                                                            },
+                                                            width: {
+                                                                N: requestBody.testResult.metadata.resolution.width.toString(),
+                                                            },
+                                                        },
+                                                    },
+                                                    windowSize: {
+                                                        M: {
+                                                            height: {
+                                                                N: requestBody.testResult.metadata.windowSize.height.toString(),
+                                                            },
+                                                            width: {
+                                                                N: requestBody.testResult.metadata.windowSize.width.toString(),
+                                                            },
+                                                        },
+                                                    },
+                                                    pixelRatio: {
+                                                        N: requestBody.testResult.metadata.pixelRatio.toString(),
+                                                    },
+                                                },
                                             },
                                             created_at: { S: nowStr },
                                         },
@@ -105,7 +159,7 @@ export const handler: any = async (event: any, _context: any, callback: any) => 
                             questionaire: {
                                 L: [],
                             },
-                        } as { [key: string]: AttributeValue };
+                        };
                     }
 
                     if (isQuestionaireResult(requestBody)) {
@@ -138,6 +192,8 @@ export const handler: any = async (event: any, _context: any, callback: any) => 
                         } as { [key: string]: AttributeValue };
                     }
 
+                    console.log("New item", JSON.stringify(newItem));
+
                     if (newItem) {
                         const putCommand = new PutItemCommand({
                             Item: newItem,
@@ -163,13 +219,53 @@ export const handler: any = async (event: any, _context: any, callback: any) => 
                                     {
                                         M: {
                                             styles: {
-                                                S: requestBody.testResult.styles,
+                                                M: {
+                                                    backgroundColor: {
+                                                        S: requestBody.testResult.styles.backgroundColor,
+                                                    },
+                                                    color: {
+                                                        S: requestBody.testResult.styles.color,
+                                                    },
+                                                    fontSize: {
+                                                        S: requestBody.testResult.styles.fontSize,
+                                                    },
+                                                    lineHeight: {
+                                                        S: requestBody.testResult.styles.lineHeight,
+                                                    },
+                                                },
                                             },
                                             text: {
                                                 S: requestBody.testResult.text,
                                             },
                                             duration: {
                                                 N: requestBody.testResult.duration.toString(),
+                                            },
+                                            metadata: {
+                                                M: {
+                                                    resolution: {
+                                                        M: {
+                                                            height: {
+                                                                N: requestBody.testResult.metadata.resolution.height.toString(),
+                                                            },
+                                                            width: {
+                                                                N: requestBody.testResult.metadata.resolution.width.toString(),
+                                                            },
+                                                        },
+                                                    },
+                                                    windowSize: {
+                                                        M: {
+                                                            height: {
+                                                                N: requestBody.testResult.metadata.windowSize.height.toString(),
+                                                            },
+                                                            width: {
+                                                                N: requestBody.testResult.metadata.windowSize.width.toString(),
+                                                            },
+                                                        },
+                                                    },
+                                                    pixelRatio: {
+                                                        N: requestBody.testResult.metadata.pixelRatio.toString(),
+                                                    },
+                                                },
                                             },
                                             created_at: { S: nowStr },
                                         },

@@ -1,8 +1,20 @@
+import { Exercise } from "../exercises/exercises";
+
 interface TestResultPayload {
-    testResult: {
-        styles: any;
+    testResult: Omit<Exercise, "dark"> & {
         text: string;
         duration: number;
+        metadata: {
+            resolution: {
+                height: number;
+                width: number;
+            };
+            windowSize: {
+                height: number;
+                width: number;
+            };
+            pixelRatio: number;
+        };
     };
 }
 
