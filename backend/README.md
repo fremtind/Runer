@@ -7,6 +7,10 @@
 * **lib/** - the CDK stack and code resources
 * **test/** - Code for unittesting the stack and other code
 
+## Environment variables
+
+* RUNER_IO_CERT: Certificate ARN for the configured domain in CloudFront.
+
 ## Setup
 run
 * `yarn build`
