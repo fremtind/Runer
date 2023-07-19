@@ -454,13 +454,6 @@
   resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@aws-cdk/region-info/-/region-info-1.106.1.tgz#5f2505ed19073f8da5dba93b17f69cd86af76472"
   integrity sha512-9mnVSqYPnqf2wBQx3nZaBh1pnK29khFi87pNjQFkN7LmK/O9rVlx4syulknBtxLJusB0TDuvY3r5PUuUJ6kFjw==
 
-"@aws-sdk/util-dynamodb@^3.17.0":
-  version "3.17.0"
-  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@aws-sdk/util-dynamodb/-/util-dynamodb-3.17.0.tgz#694cc501ab0cd5c81a6afe983dc53da6d17953a0"
-  integrity sha512-B/N8/6fa8nCvMXKBjNpynk5c2/D9uCu+tk2Pjvnd++yQU5jf1YRavLZVP1i7UQMKPQKJkJH9NeEWgFKc/K/WvQ==
-  dependencies:
-    tslib "^2.0.0"
-
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -4177,7 +4170,7 @@ tslib@^1.8.1:
   resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.0, tslib@^2.0.1:
+tslib@^2.0.1:
   version "2.2.0"
   resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
   integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
@@ -4354,9 +4347,9 @@ which@^2.0.1:
     isexe "^2.0.0"
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
-  version "1.2.3"
-  resolved "https://nexus.intern.sparebank1.no/nexus/content/groups/npmgroup/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
-  integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.4.tgz#cb4b50ec9aca570abd1f52f33cd45b6c61739a9f"
+  integrity sha512-2V81OA4ugVo5pRo46hAoD2ivUJx8jXmWXfUkY4KFNw0hEptvN0QfH3K4nHiwzGeKl5rFKedV48QVoqYavy4YpA==
 
 wordwrap@>=0.0.2:
   version "1.0.0"
